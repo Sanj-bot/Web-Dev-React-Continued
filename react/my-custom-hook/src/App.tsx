@@ -1,14 +1,15 @@
-import { useState } from 'react'
+
 
 import './App.css'
 import ProductList from './components/ProductList'
-
+import {useLogin} from "./hooks/useLogin";
 function App() {
-  const [count, setCount] = useState(0)
-
+  // const [count, setCount] = useState(0)
+  const {isLoggedIn,handleLogIn,handleLogOut}=useLogin();
+  
   return (
     <>
-     <button>Login</button>
+     <button onClick={isLoggedIn?handleLogOut:handleLogIn}>{isLoggedIn?'Log out':'Log in'}</button>
      <ProductList/>
    
     </>
@@ -16,3 +17,4 @@ function App() {
 }
 
 export default App
+
