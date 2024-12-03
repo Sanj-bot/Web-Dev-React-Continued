@@ -1,21 +1,24 @@
-import { useEffect,useState} from "react";
+// import { useEffect,useState} from "react";
 import ProductCard from "./ProductCard";
+import {useProductList} from "../hooks/useProductList"
 const ProductList =()=>{
-    const [products,setProducts]=useState([]);
-    useEffect(()=>{
-        console.log("inside useEffect....")
-            getProducts();
-    },[])
-    const getProducts=async ()=>{
-        const ProductList=await fetch('https://fakestoreapi.com/products');
-        const ProductListJson=await ProductList.json();
-        console.log(ProductListJson);
-        setProducts(ProductListJson)
-    }
-    console.log("rendering.....");
+    // const [products,setProducts]=useState([]);
+    // useEffect(()=>{
+    //     console.log("inside useEffect....")
+    //         getProducts();
+    // },[])
+    // const getProducts=async ()=>{
+    //     const ProductList=await fetch('https://fakestoreapi.com/products');
+    //     const ProductListJson=await ProductList.json();
+    //     console.log(ProductListJson);
+    //     setProducts(ProductListJson)
+    // }
+    // console.log("rendering.....");
+
+    const {products}=useProductList();
 
     return(
-        <div class="productList">
+        <div className="productList">
                 
                 {
                     // products.map(product=><div > {product.title} </div>)
