@@ -55,7 +55,7 @@ function NoteCard({ note }) {
         setSaving(false);
     }
 
-    const handleKeyUp = () => {
+    const handleKeyUp = async() => {
         setSaving(true);
         if (keyUpTimer.current) {
             clearTimeout(keyUpTimer.current);
@@ -96,9 +96,10 @@ function NoteCard({ note }) {
                 </div>
 
                 <div
-                    onKeyUp={handleKeyUp}
+                    // onKeyUp={handleKeyUp}
                     className='card-body'>
                     <textarea
+                        onKeyUp={handleKeyUp}
                         ref={textAreaRef}
                         style={{ color: colors.colorText }}
                         defaultValue={body}
