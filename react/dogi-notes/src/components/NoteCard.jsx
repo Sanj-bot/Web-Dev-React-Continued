@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import Trash from '../icons/Trash';
+import Spinner from  '../icons/Spinner';
 import { db } from '../appwrite/databases';
 import { setNewOffset, autoGrow, setZIndex, bodyParser } from '../utils';
 
@@ -83,6 +84,7 @@ function NoteCard({ note }) {
                     <Trash />
                     {saving && (
                         <div className="card-saving">
+                            <Spinner color={colors.colorText}/>
                             <span style={{ color: colors.colorText }}>
                                 Saving...
                             </span>
