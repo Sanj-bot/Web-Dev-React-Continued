@@ -6,7 +6,7 @@ import { db } from '../appwrite/databases';
 import { setNewOffset, autoGrow, setZIndex, bodyParser } from '../utils';
 
 
-function NoteCard({ note ,setNotes}) {
+function NoteCard({ note}) {
     const [saving, setSaving] = useState(false);
     const keyUpTimer = useRef(null);
     const body = bodyParser(note.body);
@@ -87,7 +87,7 @@ function NoteCard({ note ,setNotes}) {
                 <div
                     onMouseDown={mouseDown}
                     className="card-header" style={{ backgroundColor: colors.colorHeader }}>
-                    <DeleteButton setNotes={setNotes} noteId={note.$id} />
+                    <DeleteButton  noteId={note.$id} />
                     {saving && (
                         <div className="card-saving">
                             <Spinner color={colors.colorText}/>
