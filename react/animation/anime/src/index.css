@@ -11,11 +11,19 @@ body{
   width: 100%;;
 }
 body{
-  background-color: white;
+  background-color: grey;  
+}
+div{
+  align-content:end;
+  height: 1000px;
+  width: 1000px;
+  border:1px solid black;
+  background-image: linear-gradient(blue, skyblue);
 }
 
-
 img{
-height:50px;
-width:50px;
+  background-color: grey;
+  height:50px;
+  width:50px;
+  border:1px solid black;
 }

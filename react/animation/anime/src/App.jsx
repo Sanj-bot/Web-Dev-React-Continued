@@ -6,7 +6,8 @@ const App = () => {
     <div>
       <motion.img 
        animate={{
-        y:1000
+        y:-1000,
+        
       }}
       transition={{
         duration:3,
