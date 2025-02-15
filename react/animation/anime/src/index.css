@@ -11,11 +11,11 @@ body{
   width: 100%;;
 }
 body{
-  background-color: #111;
+  background-color: white;
 }
-.box{
-  height: 200px;
-  width: 200px;
-  background-color: crimson;
-  border: 2px solid white;
+
+
+img{
+height:50px;
+width:50px;
 }

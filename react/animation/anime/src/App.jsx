@@ -4,13 +4,22 @@ import {motion} from 'motion/react';
 const App = () => {
   return (
     <div>
-      <motion.div className='box'
-      animate={{
-        x:1000,
-        rotate:360,
-        transition:{duration:2}
+      <motion.img 
+       animate={{
+        y:1000
       }}
-      ></motion.div>
+      transition={{
+        duration:3,
+        delay:2
+      }}
+      src="https://www.svgrepo.com/show/530572/accelerate.svg"
+      >
+        
+      </motion.img>
+
+      
+        
+     
     </div>
     
   )
