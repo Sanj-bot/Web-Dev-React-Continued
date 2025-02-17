@@ -1,2 +1,4 @@
 ## Kubernetes notes:
 
+### Process:
+-
